@@ -1,0 +1,27 @@
+{
+  "name": "jtc-alarm-clock",
+  "version": "1.0.0",
+  "description": "Building an alarm clock app that works through the CLI. Please refer to the Requirements.md to understand the exact requirements.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shravansrinivas/jtc-alarm-clock.git"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "CLI",
+    "NodeJS",
+    "OOPS",
+    "ES6"
+  ],
+  "author": "Shravan Srinivas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shravansrinivas/jtc-alarm-clock/issues"
+  },
+  "homepage": "https://github.com/shravansrinivas/jtc-alarm-clock#readme",
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}
