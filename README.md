@@ -2,7 +2,7 @@
 
 This is a Command-Line Interface (CLI) utility for managing alarms. It allows users to set, view, snooze, and delete alarms. The application runs in a terminal and uses a simple text-based menu system to interact with the user.
 
-    Original requirements are mentioned here - https://github.com/shravansrinivas/jtc-alarm-clock/Requirements.md
+Original requirements are mentioned here - [Requirements.md](/Requirements.md)
 
 #### Features:
 
