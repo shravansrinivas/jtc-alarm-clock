@@ -74,7 +74,7 @@ const fetchAlarmDetails = (callback) => {
         if (!isValidTime(alarmTime)) {
             console.log('Invalid time format. Please enter time in HH:MM format.');
             fetchAlarmDetails(callback);
-            return;
+            return; 
         }
 
         fetchDayOfWeek(alarmTime, callback);
@@ -151,12 +151,12 @@ const handleDeleteAlarm = () => {
 
 
 const startCheckingAlarms = () => {
-    const calculateDelayToNextSecond = () => {
+    const calculateDelayToNextMinute = () => {
         const now = new Date();
-        const millisecondsUntilNextSecond = 1000 - now.getMilliseconds();
+        const millisecondsUntilNextSecond = 60000 - now.getSeconds() + 1000;
         return millisecondsUntilNextSecond;
     };
-    const delayToNextSecond = calculateDelayToNextSecond();
+    const delayToNextSecond = calculateDelayToNextMinute();
 
     // Check alarms initially
     alarmClock.checkAlarms();
@@ -176,10 +176,10 @@ const greetUser = () => {
 Hello there👋 This is an alarm clock CLI utility!`);
 }
 
+
+// main function flow
+
 greetUser();
 promptUser();
 startCheckingAlarms();
 
-module.exports = {
-    promptUser,
-};

@@ -6,6 +6,7 @@
  */
 
 
+const { SNOOZE_LIMIT_COUNT } = require("../config");
 const rl = require("../utils/ReadLine.utils");
 const Alarm = require("./Alarm.model");
 
@@ -45,7 +46,7 @@ class AlarmClock {
             console.log('Sorry, there are no alarms to list currently! Please add an alarm first to view/delete it!')
         } else {
             this.alarms.forEach((alarm, index) => {
-                console.log(`Alarm ${index + 1}: ${alarm.dayOfWeek} at ${alarm.alarmTime} ${alarm.alarmAlert() ? '[🔔alerting now🔔]' : `to alert at ${alarm.alertTime.toLocaleTimeString()}`}`);
+                console.log(`Alarm ${index + 1}: ${alarm.dayOfWeek} at ${alarm.alarmTime} ${alarm.alarmAlert() ? '[🔔alerting now🔔]' : `to alert at ${alarm.alertTime.toLocaleTimeString()}`} ${alarm.snoozeCount > 0 ? `[${SNOOZE_LIMIT_COUNT-alarm.snoozeCount} snooze remaining]`:''}`);
             });
         }
     }
